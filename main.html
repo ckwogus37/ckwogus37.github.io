@@ -1,66 +1,112 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title> Main </title>
-        <style>
-            h1 {
-                text-align: center;
-            }
 
-            #txt_welcome {
-                text-align: center; 
-                margin-bottom: 50px;
-            }
+<head>
+    <meta charset="UTF-8">
+    <title> Main </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Nanum Gothic Coding", monospace;
+            font-weight: 900;
+            font-style: normal;
+        }
 
-            .card {
-                text-align: center;
-            }
+        h1 {
+            text-align: center;
+            margin-top: 70px;
+            margin-bottom: 50px;
+        }
 
-            .card_title {
-                font-size: 20px;
-            }
+        #txt_welcome {
+            text-align: center;
+            font-size: 18px;
+            line-height: 120%;
+            margin-bottom: 90px;
+        }
 
-            .card_button {
-                font-size: 25px;
-                width: 150px;
-                height: 30px;
-            }
+        .container{
+            display:grid;
+            grid-template-columns: 400px 400px 400px;
+            column-gap: 80px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
 
-            .card_img {
-                width: 300px;
-                height: 300px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Cha Jae Hyeon</h1>
-        <div id="txt_welcome">
-            반갑습니다! <br>
-            제 프로젝트를 소개해드리겠습니다.
-            <br>
-            <br>
-            <!-- <a href="./orderlist"> order list </a> -->
+        .project {
+            text-align: center;
+            background-color: rgb(248, 230, 197);
+        }
+
+        .project_img {
+            width: 350px;
+            height: 300px;
+            margin-top: 30px;
+        }
+
+        .project_title {
+            font-size: 22px;
+        }
+
+        .project_button {
+            font-size: 16px;
+            font-weight: bold;
+            width: 150px;
+            height: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border-color: orange ;
+            background-color: rgb(250, 192, 85);
+        }
+
+        #txt_discription {
+            text-align: center;
+            color: grey;
+        }
+
+        #notion_btn {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cha Jae Hyeon</h1>
+    <div id="txt_welcome">
+        반갑습니다! <br>
+        의미있는 개발을 하고 싶은 차재현입니다. <br>
+        제가 참여했던 프로젝트를 소개해드리겠습니다.
+    </div>
+    <div class="container">
+        <div class="project">
+            <img class="project_img" src="./img/face_motion.png">
+            <p class="project_title"> [얼굴 모션인지 PDF 리더기] </p>
+            <input class="project_button" type="button" value="Github 보러가기"
+                onclick="location.href='http://github.com/CBNU-DBS/Touchless_PDF_Viewer-Client'">
         </div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr;">
-            <div class="card">
-                <img class="card_img" src="./face_motion.svg">
-                <p class="card_title"> 모션인지 PDF 리더기 </p>
-                <input class="card_button" type="button" value="" 
-                    onclick="location.href='/order?productId=1'">
-            </div>
-            <div class="card">
-                <img class="card_img" src="./AR_map.png">
-                <p class="card_title"> AR 지도 어플 </p>
-                <input class="card_button" type="button" value="order" 
-                    onclick="location.href='/order?productId=2'">
-            </div>
-            <div class="card">
-                <img class="card_img" src="./treasure_hunter.png">
-                <p class="card_title"> 보물찾기 게임 </p>
-                <input class="card_button" type="button" value="order" 
-                    onclick="location.href='/order?productId=3'">
-            </div>
+        <div class="project">
+            <img class="project_img" src="./img/AR_map.png">
+            <p class="project_title"> [AR 지도 어플] </p>
+            <input class="project_button" type="button" value="Github 보러가기"
+                onclick="location.href='https://github.com/ckwogus37/2021_Opensource_Android_OMG'">
         </div>
-    </body>
+        <div class="project">
+            <img class="project_img" src="./img/treasure_hunter.png">
+            <p class="project_title"> [보물찾기 게임] </p>
+            <input class="project_button" type="button" value="Github 보러가기"
+                onclick="location.href='https://github.com/ckwogus37/TreasureHunter-JavaYong'">  
+        </div>
+    </div>
+    <div id="txt_discription">
+        <br><br> 현재 웹 풀 사이클 데브코스에도 열심히 참여하고 있습니다!
+        <br><br><input id=notion_btn type="image" src="./img/notion_logo.png"
+            onclick="location.href='https://luck-attraction-a4c.notion.site/2-7cb0a8b7d28d45b08dad90ca05df6e69?pvs=4'">
+        <a href="https://luck-attraction-a4c.notion.site/2-7cb0a8b7d28d45b08dad90ca05df6e69?pvs=4'">재현의 데브코스 Notion</a>
+    </div>
+</body>
+
 </html>
