@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Main </title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+
+            #txt_welcome {
+                text-align: center; 
+                margin-bottom: 50px;
+            }
+
+            .card {
+                text-align: center;
+            }
+
+            .card_title {
+                font-size: 20px;
+            }
+
+            .card_button {
+                font-size: 25px;
+                width: 150px;
+                height: 30px;
+            }
+
+            .card_img {
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cha Jae Hyeon</h1>
+        <div id="txt_welcome">
+            반갑습니다! <br>
+            제 프로젝트를 소개해드리겠습니다.
+            <br>
+            <br>
+            <!-- <a href="./orderlist"> order list </a> -->
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr;">
+            <div class="card">
+                <img class="card_img" src="./face_motion.svg">
+                <p class="card_title"> 모션인지 PDF 리더기 </p>
+                <input class="card_button" type="button" value="" 
+                    onclick="location.href='/order?productId=1'">
+            </div>
+            <div class="card">
+                <img class="card_img" src="./AR_map.png">
+                <p class="card_title"> AR 지도 어플 </p>
+                <input class="card_button" type="button" value="order" 
+                    onclick="location.href='/order?productId=2'">
+            </div>
+            <div class="card">
+                <img class="card_img" src="./treasure_hunter.png">
+                <p class="card_title"> 보물찾기 게임 </p>
+                <input class="card_button" type="button" value="order" 
+                    onclick="location.href='/order?productId=3'">
+            </div>
+        </div>
+    </body>
+</html>
